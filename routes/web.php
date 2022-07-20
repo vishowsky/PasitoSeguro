@@ -31,6 +31,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/admin', function () {
+    return view('welcome');
+});
 
 Route::view('/register','register');
 Route::post("/register", [UserController::class,'register']);
