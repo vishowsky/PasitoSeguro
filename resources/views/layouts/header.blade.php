@@ -33,7 +33,7 @@ a{
       <button class="btn" type="submit">Buscar</button>
     </form>
 
-    <div class="d-flez">
+    <div class="d-flex">
 
     
     @if(session::has('user'))
