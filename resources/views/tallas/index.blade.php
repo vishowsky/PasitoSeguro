@@ -1,9 +1,31 @@
 @extends('/layouts/app')
+@section('content')
 
-<div class="container">
+<style>
+
+.card{
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+
+    margin-top:30px;
+    margin-bottom:600px;
+}
 
 
+.boton{
+    margin:10px
 
+}
+
+.card-title{
+
+    margin:3px;
+}
+</style>
+
+
+<div class="container card">
+    <h3 class="card-title">Tallas</h3>
+<div class="card-body">
 <a href="{{url('tallas/create')}}" class="btn btn-success">Agregar Talla</a>
 <table class="table table-light table-hover">
     <tbody class="thead-light">
@@ -38,3 +60,5 @@
 
 {{$tallas->links()}}
 </div>
+</div>
+@endsection

@@ -17,9 +17,8 @@ a{
   
 }
 .searchbar{
-  searchbar{
-    backgroud-co;
-  } 
+  
+   padding: 0px 350px 0px 20px;
 }
 .titulo:{
   text-color:white;
@@ -35,9 +34,9 @@ a{
 
 <nav class="navbar navbar-principal" style="z-index:1000;" >
   <div class="container-fluid">
-    <a class="navbar-brand titulo">Pasito Seguro</a>
+    <a href="/" class="navbar-brand titulo">Pasito Seguro</a>
     <form class="d-flex" role="search">
-      <input class="form-control me-2 searchbar" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control me-2 searchbar" type="search" placeholder="Ej: chupete" aria-label="Search">
       <button class="btn" type="submit">Buscar</button>
     </form>
 
