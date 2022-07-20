@@ -13,8 +13,8 @@ class CreateWebpayTable extends Migration
      */
     public function up()
     {
-        Schema::create('webpay', function (Blueprint $table) {
-            $table->bigIncrements('wp_id');
+        Schema::create('webpays', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('session_id');
             $table->float('total',9,2);
             $table->tinyInteger('status')->comment('1: pendiente. 2: aprobada.')->default(1);
@@ -30,6 +30,6 @@ class CreateWebpayTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('webpay');
+        Schema::dropIfExists('webpays');
     }
 }
