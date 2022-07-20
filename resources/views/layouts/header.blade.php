@@ -8,6 +8,7 @@ $total= ProductoController::productosCarro();
 ?>
 <style>
 .navbar-principal{
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #fed2e5;
   width: 100%;
 }
@@ -23,6 +24,9 @@ a{
 .titulo:{
   text-color:white;
 }
+
+
+
 
 
 
