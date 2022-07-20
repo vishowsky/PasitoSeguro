@@ -29,6 +29,32 @@ class ProductoController extends Controller
         return view('productos.index',$datos);
     }
 
+
+    public function catalogo()
+    {
+        $datos['productos']= DB::table('productos')
+        ->join('categorias','categorias.cat_id','=','productos.cat_id')
+        ->join('tallas','tallas.talla_id','=','productos.cat_id')
+        ->select('productos.producto_id','productos.producto_nom','productos.producto_stock','productos.producto_prec','productos.producto_desc','productos.producto_img'
+        ,'categorias.cat_nom','tallas.talla_nom')
+        ->orderBy('productos.producto_id')
+        ->paginate(5);
+        return view('productos.catalogo',$datos);
+    }
+
+
+
+    public function home()
+    {
+        $datos['productos']= DB::table('productos')
+        ->join('categorias','categorias.cat_id','=','productos.cat_id')
+        ->join('tallas','tallas.talla_id','=','productos.cat_id')
+        ->select('productos.producto_id','productos.producto_nom','productos.producto_stock','productos.producto_prec','productos.producto_desc','productos.producto_img'
+        ,'categorias.cat_nom','tallas.talla_nom')
+        ->orderBy('productos.producto_id')
+        ->paginate(5);
+        return view('/welcome',$datos);
+    }
     /**
      * Show the form for creating a new resource.
      *

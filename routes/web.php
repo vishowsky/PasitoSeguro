@@ -35,7 +35,10 @@ Route::get('/admin', function () {
     return view('welcome');
 });
 
-Route::view('/register','register');
+Route::get('/',[ProductoController::class,'catalogo']);
+
+
+
 Route::post("/register", [UserController::class,'register']);
 Route::post("/login", [UserController::class,'login']);
 Route::resource('/productos', ProductoController::class);
