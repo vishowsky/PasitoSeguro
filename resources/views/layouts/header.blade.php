@@ -33,8 +33,18 @@ a{
       <button class="btn" type="submit">Buscar</button>
     </form>
 
-    <div class="d-flez">
-   
+    <div class="d-flex">
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
     @if(session::has('user'))
       <a>{{Session::get('user')['nombre']}}</a>
       <a class="btn" href="/logout">Cerrar sesion</a>
@@ -44,6 +54,7 @@ a{
       <a class="btn" href="/listar_Carro">Carro({{$total}})</a>
       </div>
 
+      
   </div>
 </nav>
 
