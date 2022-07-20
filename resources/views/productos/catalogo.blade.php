@@ -1,6 +1,7 @@
 
 @extends('/layouts/app')
 
+@section('content')
 
 
 <table class="table table-light table-hover">
@@ -41,3 +42,5 @@
 
 
 </div>
+
+@endsection
