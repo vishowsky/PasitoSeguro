@@ -9,6 +9,7 @@ $total= ProductoController::productosCarro();
 <style>
 .navbar-principal{
   background-color: #fed2e5;
+  width: 100%;
 }
 a{
   text-decoration: none;
@@ -22,10 +23,13 @@ a{
 .titulo:{
   text-color:white;
 }
+
+
+
 </style>
 
 
-<nav class="navbar navbar-principal" >
+<nav class="navbar navbar-principal" style="z-index:1000;" >
   <div class="container-fluid">
     <a class="navbar-brand titulo">Pasito Seguro</a>
     <form class="d-flex" role="search">
