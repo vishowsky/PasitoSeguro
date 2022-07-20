@@ -33,18 +33,9 @@ a{
       <button class="btn" type="submit">Buscar</button>
     </form>
 
-    <div class="d-flex">
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+    <div class="d-flez">
 
+    
     @if(session::has('user'))
       <a>{{Session::get('user')['nombre']}}</a>
       <a class="btn" href="/logout">Cerrar sesion</a>
