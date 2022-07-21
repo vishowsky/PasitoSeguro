@@ -1,29 +1,55 @@
 @extends('/layouts/app')
 @section("content")
 
-<div class="trending-weapper">
-    <h3>Tu carro</h3>
-@foreach($productos as $item)
-    <a href="/detalle/{{$item->producto_id}}">
-        <div class="col-xs-12 col-sm-12 col-md-6 " >
+<style>
+.card{
 
-            <img class=" img-fluid left"  src="{{asset('storage').'/'.$item->producto_img}}"  width="200">
-            </div>
-        </div>
-  
-    </a>
-    <h3>{{$item->producto_nom}}</h3>
-    <h2>{{$item->producto_desc}}</h2>
-    <h2>{{$item->producto_prec}}</h2>
+    margin: 10px 2% 50px 2%;
+}
+
+</style>
 
 
-    <a href="/quitarproducto/{{$item->carroId}}" class="btn btn-primary">Quitar del carro</a>
-    
-    
-   </form> @endforeach
+<div class="card">
+<h3 style="text-align:center;">Tu carro</h3>
+    <div class="card-body">
+ 
 
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Producto</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Precio</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
 
+        @foreach($productos as $item)
+        <tbody>
+            <tr>
+                <td><img class=" img-fluid left" src="{{$item->producto_img}}" width="30"></td>
+                <td>{{$item->producto_nom}}</td>
+                <td>{{$item->producto_desc}}</td>
+                <td>{{$item->producto_prec}}</td>
+                <td><a href="/quitarproducto/{{$item->carroId}}" class="btn btn-danger"> Quitar producto</a></td>
+            </tr>
+        </tbody>
+
+        @endforeach
+
+    </table>
+    <a style="text-align:center;" class="btn btn-primary" href="comprar">comprar</a>
 </div>
-<a class="btn btn-primary" href="comprar">comprar</a>
+</div>
+
+
+
+
+
+
+
+
 
 @endsection

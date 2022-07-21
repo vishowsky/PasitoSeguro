@@ -72,6 +72,8 @@
     </tbody>
 </table>
 
+<a href="{{url('productos/create')}}" class="btn btn-success boton">Agregar producto</a>
+
 
 </div>
 </div>

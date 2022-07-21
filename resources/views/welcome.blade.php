@@ -29,7 +29,7 @@
     <p><i class="fa-solid fa-c iconos fa-lg"></i></p>
       <h5 class="card-title">Administrar Categorias</h5>
       <p class="card-text">Seccion dedicada para modificar, eliminar y agregar categorias</p>
-      <a class=" btn btn-danger"href="{{ url('/categorias/') }}">Ver Tallas</a>
+      <a class=" btn btn-danger"href="{{ url('/categorias/') }}">Ver Categorias</a>
     </div>
   </div>
   <div class="card">
@@ -37,7 +37,7 @@
     <p><i class="fa-solid fa-t iconos fa-lg"></i></p>
     <h5 class="card-title">Administrar Tallas</h5>
       <p class="card-text">Seccion dedicada para modificar, eliminar y agregar tallas</p>
-      <a class=" btn btn-danger"href="{{ url('/tallas/') }}">Ver Categorias</a>
+      <a class=" btn btn-danger"href="{{ url('/tallas/') }}">Ver Tallas</a>
     </div>
   </div>
   <div class="card">

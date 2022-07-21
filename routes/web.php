@@ -39,7 +39,9 @@ Route::get('/',[ProductoController::class,'catalogo']);
 
 
 
+Route::View("/register",'register');
 Route::post("/register", [UserController::class,'register']);
+
 Route::post("/login", [UserController::class,'login']);
 Route::resource('/productos', ProductoController::class);
 Route::resource('/categorias', CategoriaController::class);

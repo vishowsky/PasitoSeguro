@@ -136,18 +136,32 @@ class ProductoController extends Controller
         return view('/carro/index',['productos'=>$productos]);
 
     }
+
+
+
+    
     function quitarProducto($carro_id){
         Carro::destroy($carro_id);
         return redirect('listar_Carro');
     }
     function Comprar(){
+
         $userId=Session::get('user')['usu_id'];
         $total = Carro::where('usu_id',$userId)->sum('precio');
         $datosCarro= DB::table('carrito')
         ->where('carrito.usu_id',$userId)
         ->select('producto_id','precio')
         
+
+        
         ->get();
+        // $productos= DB::table('carrito')
+        // ->join('productos','carrito.producto_id','=','productos.producto_id')
+        // ->where('carrito.usu_id',$userId)
+        // ->select('productos.producto_id','productos.producto_nom','productos.producto_prec','productos.producto_img','productos.producto_desc','carrito.carrito_id as carroId')
+        
+        // ->get();
+        // return view('/carro/comprar',['total'=>$total],['productos'=>$productos]);
         return view('/carro/comprar',['total'=>$total]);
 
     }

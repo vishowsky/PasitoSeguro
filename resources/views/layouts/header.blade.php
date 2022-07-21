@@ -44,7 +44,7 @@ a{
 
     
     @if(session::has('user'))
-      <a>{{Session::get('user')['nombre']}}</a>
+      <a class="btn">{{Session::get('user')['usu_nombre']}}</a>
       <a class="btn" href="/logout">Cerrar sesion</a>
       @else
       <a class="btn" href="/login">Iniciar sesion</a>
