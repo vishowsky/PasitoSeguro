@@ -37,7 +37,7 @@ a{
     <a href="/" class="navbar-brand titulo">Pasito Seguro</a>
     <form class="d-flex" role="search">
       <input class="form-control me-2 searchbar" type="search" placeholder="Ej: chupete" aria-label="Search">
-      <button class="btn" type="submit">Buscar</button>
+      <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
 
     <div class="d-flex">
@@ -49,7 +49,7 @@ a{
       @else
       <a class="btn" href="/login">Iniciar sesion</a>
       @endif
-      <a class="btn" href="/listar_Carro">Carro({{$total}})</a>
+      <a class="btn" href="/listar_Carro"><i class="fa-solid fa-cart-shopping"></i>({{$total}})</a>
       </div>
 
       

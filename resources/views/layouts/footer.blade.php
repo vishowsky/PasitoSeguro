@@ -1,1 +1,2 @@
-<h3>Pie de pagina</h3>
+<a  class="btn "href="{{ url('/categorias/') }}">Ver Categorias</a>
+

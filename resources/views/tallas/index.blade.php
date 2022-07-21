@@ -26,7 +26,7 @@
 <div class="container card">
     <h3 class="card-title">Tallas</h3>
 <div class="card-body">
-<a href="{{url('tallas/create')}}" class="btn btn-success">Agregar Talla</a>
+
 <table class="table table-light table-hover">
     <tbody class="thead-light">
         <tr>
@@ -46,18 +46,19 @@
           
             <td>{{$talla->talla_nom}} </td>
             <td>
-                <a href="{{url('/tallas/'.$talla->talla_id.'/edit')}}" class="btn btn-info">Editar</a>
+                <a href="{{url('/tallas/'.$talla->talla_id.'/edit')}}" class="btn"><i class="fa-solid fa-pen-to-square"></i></a>
                 <form method="post" action="{{url('/tallas/'.$talla->talla_id)}}" style="display:inline" >
                 {{csrf_field()}}
                 {{method_field('DELETE')}}
-                <button type="submit" class="btn btn-danger"onclick="return confirm('¿Borrar?');">Borrar</button>
+                <button type="submit" class="btn"onclick="return confirm('¿Borrar?');"><i class="fa-solid fa-delete-left"></i></button>
             </form>
             </td>
         </tr>
         @endforeach
     </tbody>
 </table>
-
+<a href="{{url('tallas/create')}}" class="btn btn-success boton">Agregar Talla</a>
+<a href="{{url('tallas')}}" class="btn btn-primary boton">Regresar</a>
 {{$tallas->links()}}
 </div>
 </div>
