@@ -61,7 +61,7 @@
 
 {{$categorias->links()}}
 <a href="{{url('categorias/create')}}" class="btn btn-success boton">Agregar Categoria</a>
-<a href="{{url('categorias')}}" class="btn btn-primary boton">Regresar</a>
+<a href="{{url('admin')}}" class="btn btn-primary boton">Regresar</a>
 </div>
 </div>
 </div>

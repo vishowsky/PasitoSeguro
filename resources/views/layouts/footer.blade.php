@@ -1,2 +1,2 @@
-<a  class="btn "href="{{ url('/categorias/') }}">Ver Categorias</a>
+<a  class="btn "href="{{ url('/admin') }}">Admin provisorio</a>
 

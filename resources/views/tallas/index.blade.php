@@ -58,7 +58,7 @@
     </tbody>
 </table>
 <a href="{{url('tallas/create')}}" class="btn btn-success boton">Agregar Talla</a>
-<a href="{{url('tallas')}}" class="btn btn-primary boton">Regresar</a>
+<a href="{{url('admin')}}" class="btn btn-primary boton">Regresar</a>
 {{$tallas->links()}}
 </div>
 </div>

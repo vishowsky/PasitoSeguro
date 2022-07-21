@@ -191,8 +191,10 @@ class ProductoController extends Controller
      * @param  \App\Models\producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(producto $producto)
-    {
-        //
+    public function destroy($producto_id){
+        //  public function destroy($cat_id)
+        producto::destroy($producto_id);
+        return redirect('productos');
+    
     }
 }
